@@ -1,0 +1,12 @@
+{% extends "personal/header.html" %}
+
+{% block content %}
+	<p>Die nächsten Abfahrtszeiten der 73 sind:</p>
+	<p>{{abfahrt1}}</p>
+	<p>{{abfahrt2}}</p>
+	<p>{{abfahrt3}}</p>
+	{% for p in pegel %}
+		<p>{{p}}</p>
+	{% endfor %}
+	<p>Hier ist die abfragehtml</P>
+{% endblock %}	

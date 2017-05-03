@@ -1,0 +1,41 @@
+{% extends "personal/header.html" %}
+
+{% block content %}
+{% load staticfiles %}
+
+<!---<p>Hier findet tatsächlich die ganze Abfrage statt!</p>--->
+<!---<p>Die erste mögliche Abfahrt ab jetzt ist:</p>
+{{abfahrt1}}
+<p></p>
+{{pegel1}}
+<p>Die zweite mögliche Abfahrt ab jetzt ist:</p>
+{{abfahrt2}}
+<p></p>
+{{pegel2}}
+<p>Die dritte mögliche Abfahrt ab jetzt ist:</p>
+{{abfahrt3}}
+<p></p>
+{{pegel3}}--->
+<div class="row">
+	<div class="col-sm-4">
+	</div>
+	<div class="col-sm-1">
+	{% include "pegelstand/includes/ergebnis0.html" %}	
+	</div>
+	<div class="col-sm-1">
+	{% include "pegelstand/includes/ergebnis1.html" %}
+	</div>
+	<div class="col-sm-1">
+	{% include "pegelstand/includes/ergebnis2.html" %}
+	</div>
+	<div class="col-sm-1">
+	{% include "pegelstand/includes/ergebnis3.html" %}
+	</div>
+	<div class="col-sm-4">
+	</div>
+</div>
+<div class="row">
+<p>grün = die Fähre fährt, gelb = es ist unsicher ob die Fähre fährt, rot = die Fähre fährt nicht, weiss = es gibt Probleme bei der Pegelstanderhebung</p>
+<p>Alle Angaben sind ohne Gewähr und keine offizielle Auskunft!</p>
+</div>
+{% endblock %}	

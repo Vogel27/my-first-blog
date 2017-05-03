@@ -1,0 +1,8 @@
+{% extends "personal/header.html" %}
+
+{% block content %}
+	{% for Pegel in object_list %}
+	<h5>{{ Pegel.date|date:"Y-m-d h:m"}} Pegelstand: {{Pegel.pegelstand}}</a></h5> <!---<a href="/detail/{{Pegel.id}}">--->
+	{% endfor %}
+	<p>What?</p>
+{% endblock %}

@@ -1,0 +1,19 @@
+
+{% block content %}
+{% load staticfiles %}
+<p></p>
+{{abfahrt3}}
+<p></p>
+{{pegel3}}
+
+{% if outcome3 == "0" %}
+	<p><img src="{% static 'personal/img/green.png' %}" class="responsive-img" style='max-height:20px;' alt="ampel"></p>
+{% elif outcome3 == "1" %}
+	<p><img src="{% static 'personal/img/yellow.png' %}" class="responsive-img" style='max-height:20px;' alt="ampel"></p>
+{% elif outcome3 == "2" %}
+	<p><img src="{% static 'personal/img/red.png' %}" class="responsive-img" style='max-height:20px;' alt="ampel"></p>
+{% elif outcome3 == "999" %}
+	<p><img src="{% static 'personal/img/white.png' %}" class="responsive-img" style='max-height:20px;' alt="ampel"></p>
+{% endif %}
+
+{% endblock %}	
